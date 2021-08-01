@@ -27,8 +27,19 @@ export default function Home() {
 
         </header>
 
-        <main className="">
-          <div className="bg-white" style={{width: "300px", height: "300px"}}></div>
+        <main className="flex">
+          <div className="flex-none mr-12 bg-white shadow-2xl" style={{width: "300px", height: "300px"}}></div>
+          <div className="flex-1">
+            <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
+            <p className="text-md mb-6">
+              We’re offering 1st edition mint of 100 Blank NFTs for 0.05 ETH each that 
+              evolve over time and grant you founding membership in the community. 
+              100% of revenue to the community-governed treasury. 
+            </p>
+            <p className="text-md">
+              To purchase, apply in Discord.
+            </p>
+          </div>
         </main>
 
         <footer className="">
