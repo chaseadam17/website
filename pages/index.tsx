@@ -25,7 +25,9 @@ export default function Home() {
         </header>
 
         <main className="flex">
-          <div className="flex-none mr-12 bg-white shadow-2xl" style={{width: "300px", height: "300px"}}></div>
+          <div className="flex flex-none mr-12 bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest" style={{width: "300px", height: "300px"}}>
+            <div className="m-auto">001</div>
+          </div>
           <div className="flex-none w-1/2">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
             <p className="text-md mb-6">
