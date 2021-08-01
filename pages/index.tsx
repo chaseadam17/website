@@ -1,6 +1,22 @@
 import Head from 'next/head'
+import { useEffect } from 'react';
 
-export default function Home() {
+const home = function Home() {
+  useEffect(() => {
+    const tick = () => {
+      const countElement = document.getElementById('canvas-count');
+      let count = parseInt(countElement.innerHTML);
+      if (count > 100) count = 0;
+      let nextCount = `${count + 1}`;
+      while (nextCount.length < 3) {
+        nextCount = `0${nextCount}`;
+      }
+      countElement.innerHTML = nextCount;
+    }
+    
+    setInterval(tick, 1000);
+  }, []);
+
   return (
     <div className="font-roboto-mono bg-gray-100">
       <Head>
@@ -26,7 +42,7 @@ export default function Home() {
 
         <main className="flex">
           <div className="flex flex-none mr-12 bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest" style={{width: "300px", height: "300px"}}>
-            <div className="m-auto">001</div>
+            <div id="canvas-count" className="m-auto">001</div>
           </div>
           <div className="flex-none w-1/2">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
@@ -49,3 +65,6 @@ export default function Home() {
     </div>
   )
 }
+
+
+export default home;
