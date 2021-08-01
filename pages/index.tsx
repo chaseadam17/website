@@ -29,7 +29,7 @@ export default function Home() {
 
         <main className="flex">
           <div className="flex-none mr-12 bg-white shadow-2xl" style={{width: "300px", height: "300px"}}></div>
-          <div className="flex-1">
+          <div className="flex-none w-1/2">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
             <p className="text-md mb-6">
               We’re offering 1st edition mint of 100 Blank NFTs for 0.05 ETH each that 
