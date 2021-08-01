@@ -6,7 +6,7 @@ const home = function Home() {
     const tick = () => {
       const countElement = document.getElementById('canvas-count');
       let count = parseInt(countElement.innerHTML);
-      if (count > 100) count = 0;
+      if (count >= 100) count = 0;
       let nextCount = `${count + 1}`;
       while (nextCount.length < 3) {
         nextCount = `0${nextCount}`;
@@ -14,7 +14,11 @@ const home = function Home() {
       countElement.innerHTML = nextCount;
     }
     
-    setInterval(tick, 1000);
+    const interval = setInterval(tick, 1000);
+
+    return () => {
+      window.clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -54,6 +58,10 @@ const home = function Home() {
             <p className="text-md">
               To purchase, apply in Discord.
             </p>
+
+            <a href="" className="inline-block font-bold bg-black text-white text-sm text-center px-12 py-1 mt-6">
+              Apply
+            </a>
           </div>
         </main>
 
