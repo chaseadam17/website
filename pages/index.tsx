@@ -28,8 +28,8 @@ const home = function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container mx-auto flex flex-col h-screen justify-between xl:px-36">
-        <header className="pt-12 flex flex-row justify-between">
+      <div className="flex flex-col h-screen justify-between">
+        <header className="mx-auto container xl:px-36 pt-12 flex flex-row justify-between">
           <h1 className="font-semibold tracking-wide text-sm">
             Blank
             <span className="tracking-widest">.</span>
@@ -37,14 +37,14 @@ const home = function Home() {
           </h1>
 
           <div>
-            <a href="" className="pl-6 text-sm">Discord</a>
-            <a href="" className="pl-6 text-sm">Twitter</a>
-            <a href="" className="pl-6 text-sm">Medium</a>
+            <a href="" target="_blank" className="pl-6 text-sm">Discord</a>
+            <a href="" target="_blank" className="pl-6 text-sm">Twitter</a>
+            <a href="" target="_blank" className="pl-6 text-sm">Medium</a>
           </div>
 
         </header>
 
-        <main className="flex">
+        <main className="mx-auto flex container xl:px-36">
           <div className="flex flex-none mr-12 bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest" style={{width: "300px", height: "300px"}}>
             <div id="canvas-count" className="m-auto">001</div>
           </div>
@@ -59,17 +59,21 @@ const home = function Home() {
               To purchase, apply in Discord.
             </p>
 
-            <a href="" className="inline-block font-bold bg-black text-white text-sm text-center px-12 py-1 mt-6">
+            <a href="" target="_blank" className="inline-block font-bold bg-black text-white text-sm text-center px-12 py-1 mt-6">
               Apply
+            </a>
+
+            <a href="" target="_blank" className="ml-6 inline-block font-bold bg-gray-300 text-black text-sm text-center px-12 py-1 mt-6">
+              Learn More
             </a>
           </div>
         </main>
 
-        <footer className="">
+        <footer className="bg-black text-white flex-none px-64 py-6">
           Footer
         </footer>
       </div>
-      
+  
     </div>
   )
 }
