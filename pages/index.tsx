@@ -36,10 +36,10 @@ const home = function Home() {
             Foundation
           </h1>
 
-          <div className="py-6 md:pt-0">
-            <a href="" target="_blank" className="pl-6 text-sm">Discord</a>
-            <a href="" target="_blank" className="pl-6 text-sm">Twitter</a>
-            <a href="" target="_blank" className="pl-6 text-sm">Medium</a>
+          <div className="py-6 md:pt-0 text-sm">
+            <a href="" target="_blank" className="px-3 md:px-3 ">Discord</a>
+            <a href="" target="_blank" className="px-3 md:px-3">Twitter</a>
+            <a href="" target="_blank" className="px-3 md:px-3">Medium</a>
           </div>
 
         </header>
@@ -48,7 +48,7 @@ const home = function Home() {
           <div className="mb-12 mx-auto flex flex-none bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest md:mx-12" style={{width: "300px", height: "300px"}}>
             <div id="canvas-count" className="m-auto">001</div>
           </div>
-          <div className="flex-none w-1/2">
+          <div className="flex-none mx-auto w-11/12 md:w-1/2 my-12 md:my-6">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
             <p className="text-md mb-6">
               We’re offering 1st edition mint of 100 Blank NFTs for 0.05 ETH each that 
@@ -69,7 +69,7 @@ const home = function Home() {
           </div>
         </main>
 
-        <footer className="bg-black text-white md:flex-none md:px-64 py-6">
+        <footer className="bg-black text-white text-center md:flex-none md:px-64 py-6">
           Footer
         </footer>
       </div>
