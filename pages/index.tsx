@@ -28,15 +28,15 @@ const home = function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col h-screen justify-between">
-        <header className="mx-auto container xl:px-36 pt-12 flex flex-row justify-between">
-          <h1 className="font-semibold tracking-wide text-sm">
+      <div className="md:flex md:flex-col md:h-screen md:justify-between">
+        <header className="py-6 md:pt-12 text-center md:text-left md:mx-auto md:container xl:px-36 md:flex md:flex-row md:justify-between">
+          <h1 className="font-semibold tracking-wide text-sm ">
             Blank
             <span className="tracking-widest">.</span>
             Foundation
           </h1>
 
-          <div>
+          <div className="py-6 md:pt-0">
             <a href="" target="_blank" className="pl-6 text-sm">Discord</a>
             <a href="" target="_blank" className="pl-6 text-sm">Twitter</a>
             <a href="" target="_blank" className="pl-6 text-sm">Medium</a>
@@ -44,8 +44,8 @@ const home = function Home() {
 
         </header>
 
-        <main className="mx-auto flex container xl:px-36">
-          <div className="flex flex-none mr-12 bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest" style={{width: "300px", height: "300px"}}>
+        <main className="md:mx-auto md:flex md:container xl:px-36">
+          <div className="mb-12 mx-auto flex flex-none bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest md:mx-12" style={{width: "300px", height: "300px"}}>
             <div id="canvas-count" className="m-auto">001</div>
           </div>
           <div className="flex-none w-1/2">
@@ -69,7 +69,7 @@ const home = function Home() {
           </div>
         </main>
 
-        <footer className="bg-black text-white flex-none px-64 py-6">
+        <footer className="bg-black text-white md:flex-none md:px-64 py-6">
           Footer
         </footer>
       </div>
