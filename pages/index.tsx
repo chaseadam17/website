@@ -46,12 +46,12 @@ const home = function Home() {
 
         <main className="md:mx-auto md:flex md:container xl:px-36">
           <div className="mb-12 mx-auto flex flex-none bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest md:mx-12" style={{width: "300px", height: "300px"}}>
-            <div id="canvas-count" className="m-auto">001</div>
+            <div className="m-auto"><span id="canvas-count">001</span> / 1000</div>
           </div>
           <div className="flex-none mx-auto w-11/12 md:w-1/2 my-12 md:my-6">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
             <p className="text-md mb-6">
-              We’re offering 1st edition mint of 100 Blank NFTs for 0.05 ETH each that 
+              We’re offering 1st edition mint of 1000 Blank NFTs for 0.05 ETH each that 
               evolve over time and grant you founding membership in the community. 
               100% of revenue to the community-governed treasury. 
             </p>
