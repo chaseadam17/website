@@ -6,7 +6,7 @@ const home = function Home() {
     const tick = () => {
       const countElement = document.getElementById('canvas-count');
       let count = parseInt(countElement.innerHTML);
-      if (count >= 100) count = 0;
+      if (count >= 1000) count = 0;
       let nextCount = `${count + 1}`;
       while (nextCount.length < 3) {
         nextCount = `0${nextCount}`;
