@@ -37,9 +37,9 @@ const home = function Home() {
           </h1>
 
           <div className="py-6 md:pt-0 text-sm">
-            <a href="https://discord.gg/HZM2jcHdEU" target="_blank" className="px-3 md:px-3 ">Discord</a>
-            <a href="https://twitter.com/blankfdn" target="_blank" className="px-3 md:px-3">Twitter</a>
-            <a href="https://medium.com/@blankfdn" target="_blank" className="px-3 md:px-3">Medium</a>
+            <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
+            <a href="https://twitter.com/blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Twitter</a>
+            <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Medium</a>
           </div>
 
         </header>
@@ -59,11 +59,11 @@ const home = function Home() {
               To purchase, apply in Discord.
             </p>
 
-            <a href="https://discord.gg/HZM2jcHdEU" target="_blank" className="inline-block font-bold bg-black text-white text-sm text-center px-6 py-1 mt-6">
+            <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="inline-block font-bold bg-black text-white text-sm text-center px-6 py-1 mt-6">
               Apply
             </a>
 
-            <a href="https://medium.com/@blankfdn/introducing-blank-4a41f8209982" target="_blank" className="ml-6 inline-block font-bold bg-gray-300 text-black text-sm text-center px-6 py-1 mt-6">
+            <a href="https://medium.com/@blankfdn/introducing-blank-4a41f8209982" target="_blank" rel="noreferrer" className="ml-6 inline-block font-bold bg-gray-300 text-black text-sm text-center px-6 py-1 mt-6">
               Learn More
             </a>
           </div>
