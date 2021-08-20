@@ -96,7 +96,7 @@ const home = function Home() {
           </div>
         </main>
 
-        <footer className="bg-black text-white md:flex-none md:px-52 py-3 text-sm">
+        <footer className="bg-black text-white md:flex-none md:px-52 py-3 text-sm text-center sm:text-left">
           <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
           <a href="https://twitter.com/blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Twitter</a>
           <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Medium</a>
