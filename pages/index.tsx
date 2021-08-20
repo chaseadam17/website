@@ -2,24 +2,24 @@ import Head from 'next/head'
 import { useEffect } from 'react';
 
 const home = function Home() {
-  useEffect(() => {
-    const tick = () => {
-      const countElement = document.getElementById('canvas-count');
-      let count = parseInt(countElement.innerHTML);
-      if (count >= 1000) count = 0;
-      let nextCount = `${count + 1}`;
-      while (nextCount.length < 3) {
-        nextCount = `0${nextCount}`;
-      }
-      countElement.innerHTML = nextCount;
-    }
+  // useEffect(() => {
+  //   const tick = () => {
+  //     const countElement = document.getElementById('canvas-count');
+  //     let count = parseInt(countElement.innerHTML);
+  //     if (count >= 1000) count = 0;
+  //     let nextCount = `${count + 1}`;
+  //     while (nextCount.length < 3) {
+  //       nextCount = `0${nextCount}`;
+  //     }
+  //     countElement.innerHTML = nextCount;
+  //   }
     
-    const interval = setInterval(tick, 1000);
+  //   const interval = setInterval(tick, 1000);
 
-    return () => {
-      window.clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     window.clearInterval(interval);
+  //   };
+  // }, []);
 
   const toggleAudio = () => {
     const mp3: HTMLAudioElement = document.getElementById('mp3') as HTMLAudioElement;
@@ -69,8 +69,11 @@ const home = function Home() {
         </header>
 
         <main className="md:mx-auto md:flex md:container xl:px-36">
-          <div className="mb-12 mx-auto flex flex-none bg-white shadow-2xl text-center text-gray-400 text-lg tracking-widest md:mx-12" style={{width: "300px", height: "300px"}}>
-            <div className="m-auto"><span id="canvas-count">001</span> / 1000</div>
+          <div className="mb-12 mx-auto flex flex-none bg-white shadow-2xl text-center text-md tracking-widest md:mx-12" style={{width: "300px", height: "300px"}}>
+            <div className="m-auto">
+              <div><span id="canvas-count">1000</span> / 1000</div>
+              <div className="text-gray-400 pt-3">Remaining</div>
+            </div>
           </div>
           <div className="flex-none mx-auto w-11/12 md:w-1/2 my-12 md:my-6">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
