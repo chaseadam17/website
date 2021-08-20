@@ -21,6 +21,22 @@ const home = function Home() {
     };
   }, []);
 
+  const toggleAudio = () => {
+    const mp3: HTMLAudioElement = document.getElementById('mp3') as HTMLAudioElement;
+    const play = document.getElementById("play");
+    const pause = document.getElementById("pause");
+
+    if (play.classList.contains('hidden')) {
+      mp3.pause();
+      play.classList.remove('hidden');
+      pause.classList.add('hidden');
+    } else {
+      mp3.play();
+      play.classList.add('hidden');
+      pause.classList.remove('hidden');
+    }
+  }
+
   return (
     <div className="font-roboto-mono bg-gray-100">
       <Head>
@@ -29,17 +45,25 @@ const home = function Home() {
       </Head>
 
       <div className="md:flex md:flex-col md:h-screen md:justify-between">
-        <header className="py-6 md:pt-12 text-center md:text-left md:mx-auto md:container xl:px-36 md:flex md:flex-row md:justify-between">
-          <h1 className="font-semibold tracking-wide text-sm ">
+        <header className="px-6 py-6 md:pt-12 text-center md:text-left md:mx-auto md:container xl:px-36 flex flex-row justify-between">
+          <h1 className="pt-3 font-semibold tracking-wide text-sm ">
             Blank
             <span className="tracking-widest">.</span>
             Foundation
           </h1>
 
-          <div className="py-6 md:pt-0 text-sm">
-            <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
-            <a href="https://twitter.com/blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Twitter</a>
-            <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Medium</a>
+          <div onClick={toggleAudio} className="cursor-pointer">
+            <svg id="play" xmlns="http://www.w3.org/2000/svg" className="bg-black h-9 w-9 rounded-full shado" viewBox="1 1 18 18" fill="white">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+            </svg>
+            <svg id="pause" xmlns="http://www.w3.org/2000/svg" className="bg-black h-9 w-9 rounded-full hidden" viewBox="1 1 18 18" fill="white">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+
+            <audio id="mp3">
+              <source src="Blank_Banshee_-_B-Start_Up.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
           </div>
 
         </header>
@@ -69,7 +93,10 @@ const home = function Home() {
           </div>
         </main>
 
-        <footer className="bg-black text-white text-center md:flex-none md:px-64 py-6">
+        <footer className="bg-black text-white md:flex-none md:px-52 py-3 text-sm">
+          <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
+          <a href="https://twitter.com/blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Twitter</a>
+          <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Medium</a>
         </footer>
       </div>
   
