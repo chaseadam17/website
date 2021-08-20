@@ -2,24 +2,34 @@ import Head from 'next/head'
 import { useEffect } from 'react';
 
 const home = function Home() {
-  // useEffect(() => {
-  //   const tick = () => {
-  //     const countElement = document.getElementById('canvas-count');
-  //     let count = parseInt(countElement.innerHTML);
-  //     if (count >= 1000) count = 0;
-  //     let nextCount = `${count + 1}`;
-  //     while (nextCount.length < 3) {
-  //       nextCount = `0${nextCount}`;
-  //     }
-  //     countElement.innerHTML = nextCount;
-  //   }
-    
-  //   const interval = setInterval(tick, 1000);
+  useEffect(() => {
+    const current = 700;
+    const total = 1000;
+    let count = total;
+    let timeout;
 
-  //   return () => {
-  //     window.clearInterval(interval);
-  //   };
-  // }, []);
+    const tick = () => {
+      const countElement = document.getElementById('canvas-count');
+      count = parseInt(countElement.innerHTML);
+      if (count <= current) count = current + 1;
+      let nextCount = `${count - 1}`;
+      while (nextCount.length < 3) {
+        nextCount = `0${nextCount}`;
+      }
+      countElement.innerHTML = nextCount;
+
+      if (count > current + 1) {
+        const time = 1000 * Math.pow(current / count, 100);
+        timeout = setTimeout(tick, time);
+      }
+    }
+
+    tick();
+    
+    return () => {
+      window.clearTimeout(timeout);
+    };
+  }, []);
 
   const toggleAudio = () => {
     const mp3: HTMLAudioElement = document.getElementById('mp3') as HTMLAudioElement;
