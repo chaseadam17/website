@@ -88,9 +88,10 @@ const home = function Home() {
           <div className="flex-none mx-auto w-11/12 md:w-1/2 my-12 md:my-6">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
             <p className="text-md mb-6">
-              We’re offering 1st edition mint of 1000 Blank NFTs for 0.05 ETH each that 
-              evolve over time and grant you founding membership in the community. 
-              100% of revenue to the community-governed treasury. 
+              We’re offering 1st edition mint of <span className="font-extrabold">1,000 Blank NFTs</span> for 0.05 ETH. 
+              They <span className="font-extrabold">evolve over time</span>, 
+              grant you founding membership in the community, 
+              and 100% of revenue goes to a community-governed treasury.
             </p>
             <p className="text-md">
               To purchase, apply in Discord.
@@ -106,7 +107,7 @@ const home = function Home() {
           </div>
         </main>
 
-        <footer className="bg-black text-white md:flex-none md:px-52 py-3 text-sm text-center sm:text-left">
+        <footer className="bg-black text-white md:flex-none md:px-52 py-3 text-base text-center sm:text-left">
           <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
           <a href="https://twitter.com/blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Twitter</a>
           <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Medium</a>
