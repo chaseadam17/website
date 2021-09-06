@@ -19,7 +19,7 @@ const home = function Home() {
       countElement.innerHTML = nextCount;
 
       if (count > current + 1) {
-        const time = 1000 * Math.pow(current / count, 100);
+        const time = 1000 * Math.pow(current / count, 1000);
         timeout = setTimeout(tick, time);
       }
     }
@@ -80,13 +80,13 @@ const home = function Home() {
         </header>
 
         <main className="md:mx-auto md:flex md:container lg:px-6 xl:px-36">
-          <div className="mb-12 flex flex-none bg-center text-center text-md tracking-widest" style={{width: "300px", height: "300px", backgroundImage: `url("/nft.png")`}}>
+          <div className="mx-auto sm:mx-0 mb-12 flex flex-none bg-center bg-contain bg-no-repeat text-center text-md tracking-widest" style={{width: "360px", height: "330px", backgroundImage: `url("/nft.png")`}}>
             <div className="m-auto">
               <div><span id="canvas-count">10000</span> / 10000</div>
               <div className="text-gray-400 pt-3">Remaining</div>
             </div>
           </div>
-          <div className="flex-none mx-auto w-11/12 md:w-1/2 my-12 md:my-6">
+          <div className="flex-none mx-auto w-11/12 md:w-1/2 my-12 md:my-12">
             <h1 className="text-2xl mb-6 font-semibold">United by a blank canvas</h1>
             <p className="text-md mb-6">
               We’re selling <span className="font-extrabold">10,000 Blank NFTs</span> for 0.05 ETH
