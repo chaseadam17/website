@@ -1,8 +1,6 @@
 **\*** IMPORTANT **\***
 
-Need to copy this to the blank-website repository in order to deploy on Vercel
-
-Run yarn build and push to git from ../personal-blank-website
+Currently connected to jaredcosulich/personal-blank-website on github to get the free vercel personal plan.
 
 ---
 
