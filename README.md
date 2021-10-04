@@ -1,3 +1,11 @@
+**\*** IMPORTANT **\***
+
+Need to copy this to the blank-website repository in order to deploy on Vercel
+
+Run yarn build and push to git from ../personal-blank-website
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
