@@ -128,7 +128,7 @@ const home = function Home() {
               Apply
             </a>
 
-            <a href="https://medium.com/@blankfdn/introducing-blank-4a41f8209982" target="_blank" rel="noreferrer" className="ml-6 inline-block font-bold bg-gray-300 text-gray-900 text-xs text-center px-9 py-2 mt-6">
+            <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="ml-6 inline-block font-bold bg-gray-300 text-gray-900 text-xs text-center px-9 py-2 mt-6">
               Learn More
             </a>
           </div>
