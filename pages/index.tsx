@@ -1,7 +1,10 @@
 import Head from 'next/head'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import BigBangStarField from 'react-big-bang-star-field'
 
 const home = function Home() {
+  const [bigBang, setBigBang] = useState(false)
+
   useEffect(() => {
     const current = 9900;
     const total = 10000;
@@ -40,10 +43,12 @@ const home = function Home() {
       mp3.pause();
       play.classList.remove('hidden');
       pause.classList.add('hidden');
+      setBigBang(false);
     } else {
       mp3.play();
       play.classList.add('hidden');
       pause.classList.remove('hidden');
+      setBigBang(true);
     }
   }
 
@@ -53,7 +58,29 @@ const home = function Home() {
         <title>Blank Foundation</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <div className={`${bigBang ? '' : 'absolute -top-full'}`} onClick={toggleAudio}>
+        <div className={`${bigBang ? 'opacity-100' : 'opacity-0'} bg-black absolute h-screen w-full transition-all duration-1000 ease-in-out`}>
+          <div className='absolute pt-96 w-full text-center text-white text-4xl'>
+            Blank Bang
+          </div>
 
+          {bigBang && 
+            <BigBangStarField
+              size={{ width: 100, height: 100 }}
+              numStars={666}
+              maxStarSpeed={1}
+              scale={4}
+              style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: '100%'
+                }}
+              starColor={"255, 255, 255"}
+            />
+          }
+        </div>
+      </div>
       <div className="md:flex md:flex-col md:h-screen md:justify-between">
         <header className="px-6 py-6 md:pt-12 text-center md:text-left md:mx-auto md:container xl:px-36 flex flex-row justify-between">
           <h1 className="pt-3 font-semibold tracking-wide text-sm ">
@@ -62,7 +89,7 @@ const home = function Home() {
             Foundation
           </h1>
 
-          <div onClick={toggleAudio} className="cursor-pointer">
+          <div onClick={toggleAudio} className="cursor-pointer z-50">
             <svg id="play" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" className="bg-gray-900 p-1 h-8 w-8 rounded-full">
               <path d="M4.33993 2.93L2.92993 4.34L7.28993 8.7L6.99993 9H2.99993V15H6.99993L11.9999 20V13.41L16.1799 17.59C15.5299 18.08 14.7999 18.47 13.9999 18.7V20.76C15.3399 20.46 16.5699 19.84 17.6099 19.01L19.6599 21.06L21.0699 19.65L4.33993 2.93ZM9.99993 15.17L7.82993 13H4.99993V11H7.82993L8.70993 10.12L9.99993 11.41V15.17ZM18.9999 12C18.9999 12.82 18.8499 13.61 18.5899 14.34L20.1199 15.87C20.6799 14.7 20.9999 13.39 20.9999 12C20.9999 7.72 18.0099 4.14 13.9999 3.23V5.29C16.8899 6.15 18.9999 8.83 18.9999 12ZM11.9999 4L10.1199 5.88L11.9999 7.76V4ZM16.4999 12C16.4999 10.23 15.4799 8.71 13.9999 7.97V9.76L16.4799 12.24C16.4899 12.16 16.4999 12.08 16.4999 12Z" fill="white"/>
             </svg>
