@@ -136,7 +136,7 @@ const home = function Home() {
 
         <footer className="bg-gray-900 text-white py-6 text-xs">
           <div className="container mx-auto lg:px-3 xl:px-32 text-center sm:text-left">
-            <a href="https://discord.gg/HZM2jcHdEU" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
+            <a href="https://discord.gg/EvyXJHxJaw" target="_blank" rel="noreferrer" className="px-3 md:px-3 ">Discord</a>
             <a href="https://twitter.com/blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Twitter</a>
             <a href="https://medium.com/@blankfdn" target="_blank" rel="noreferrer" className="px-3 md:px-3">Medium</a>
           </div>
